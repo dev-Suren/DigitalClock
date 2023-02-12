@@ -8,7 +8,9 @@ public class CurrentDay implements Date{
     private SimpleDateFormat simpleDateFormat;
     private String todayDay;
     private String todayDate;
+
     @Override
+    //overriding currentdate from date interface
     public String currentDate() {
         simpleDateFormat = new SimpleDateFormat("MMMMM dd, yyyy");
         todayDate = simpleDateFormat.format(calendar.getInstance().getTime());
