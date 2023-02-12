@@ -10,14 +10,14 @@ public class CurrentDay implements Date{
     private String todayDate;
     @Override
     public String currentDate() {
-        simpleDateFormat = new SimpleDateFormat("MM dd, yyyy");
+        simpleDateFormat = new SimpleDateFormat("MMMMM dd, yyyy");
         todayDate = simpleDateFormat.format(calendar.getInstance().getTime());
         return todayDate;
     }
 
 
-    private String today() {
-        simpleDateFormat = new SimpleDateFormat("EEEE");
+    public String today() {
+        simpleDateFormat = new SimpleDateFormat("E");
         todayDay = simpleDateFormat.format(calendar.getInstance().getTime());
         return todayDay;
     }
