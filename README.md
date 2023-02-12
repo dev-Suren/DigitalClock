@@ -1,2 +1,1 @@
-# DigitalClock
-#project
+# project Digital Clock
