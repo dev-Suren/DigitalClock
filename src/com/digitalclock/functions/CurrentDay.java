@@ -18,12 +18,13 @@ public class CurrentDay implements Date{
     }
 
 
-    public String today() {
+    private String today() {
         simpleDateFormat = new SimpleDateFormat("E");
         todayDay = simpleDateFormat.format(calendar.getInstance().getTime());
         return todayDay;
     }
 
+    //using getter to get the data from private field. Encapsulation.
     public String getToday(){
         return today();
     }

@@ -5,7 +5,7 @@ import com.digitalclock.functions.Date;
 
 import javax.swing.*;
 import java.awt.*;
-import java.text.SimpleDateFormat;
+
 
 //Extending JFrame library to make gui application.
 public class ClockFrame extends JFrame {
@@ -28,17 +28,17 @@ public class ClockFrame extends JFrame {
         this.setTitle("Dital Clock");
         this.setLayout(new FlowLayout());
         this.setSize(350,200);
-        //this.setResizable(false);
+        this.setResizable(false);
         //allocating current time
         currentTime = new JLabel();
         newCurrentTime = new CurrentTime();
         currentTime.setText(newCurrentTime.nowTime());
         currentTime.setFont(new Font("Verdana",Font.PLAIN,50));
         currentTime.setForeground(new Color(0x333333));
-        currentTime.setBackground(new Color(0xf0f0ff));
+        currentTime.setBackground(new Color(0x61618C));
         currentTime.setOpaque(true);
         this.add(currentTime);
-
+        //allocating todays day
         todayDays = new JLabel();
         currentTodayDate = new CurrentDay();
         todayDays.setText(currentTodayDate.getToday());
@@ -47,17 +47,19 @@ public class ClockFrame extends JFrame {
         todayDays.setOpaque(true);
         this.add(todayDays);
 
-
+        //showing today date in gui
         todayDate = new JLabel();
         todayDate.setText(dates.currentDate());
         todayDate.setFont(new Font("Verdana",Font.PLAIN,35));
         todayDate.setForeground(new Color(0x333333));
-        todayDate.setBackground(new Color(0xf0f0ff));
+        todayDate.setBackground(new Color(0x525291));
         todayDate.setOpaque(true);
         this.add((todayDate));
         this.setVisible(true);
         setTime();
     }
+
+    //this method is used to update time every seconds and exception is used here.
     public void setTime(){
         while(true){
             currentTime.setText(newCurrentTime.nowTime());
