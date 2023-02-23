@@ -1,5 +1,5 @@
 
-                        Digital Clock
+                                                           Digital Clock
 ## About Digital Clock
 This is a simple Digital Clock which show current time in hour minutes and second. It aslo include todays date can todays day as well. I have used spring to make graphical user interface.
 ## Concept Used
